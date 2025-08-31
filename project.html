@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Production</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#video">Video</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header id="overview">
+    <h1>🌾 Food Production Overview</h1>
+    <p>Learn how food is grown, processed, and distributed.</p>
+  </header>
+
+  <!-- Dropdown Section -->
+  <section class="dropdown-section">
+    <label for="category">Choose a category:</label>
+    <select id="category" onchange="showInfo()">
+      <option value="">-- Select --</option>
+      <option value="agriculture">Agriculture</option>
+      <option value="processing">Processing</option>
+      <option value="distribution">Distribution</option>
+    </select>
+  </section>
+
+  <!-- Info Card -->
+  <section id="info" class="info-card"></section>
+
+  <!-- Image Gallery -->
+  <section id="gallery">
+    <h2>🌿 Food Production Gallery</h2>
+    <div class="gallery">
+      <img src="agriculture.jpg" alt="Agriculture">
+      <img src="processing.jpg" alt="Processing">
+      <img src="distribution.jpg" alt="Distribution">
+    </div>
+  </section>
+
+  <!-- Embedded Video -->
+  <section id="video">
+    <h2>🎥 Watch: Modern Farming Techniques</h2>
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact">
+    <h2>📬 Contact Us</h2>
+    <form onsubmit="return validateForm()">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+      <label for="message">Message:</label>
+      <textarea id="message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Scroll to Top Button -->
+  <button onclick="scrollToTop()" id="topBtn">↑ Top</button>
+
+  <footer>
+    <p>&copy; 2025 Food Production Insights</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
